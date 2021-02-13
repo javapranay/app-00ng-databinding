@@ -1,0 +1,27 @@
+<fieldset>
+  <legend>Add Product</legend>
+  <dl>
+    <dt>Name</dt>
+    <dd><input type="text" [(ngModel)]="txtName"></dd>
+    <dt>Price</dt>
+    <dd><input type="text" [(ngModel)]="txtPrice"></dd>
+  </dl><br>
+  <button (click)="AddProduct()">Add Product</button>
+</fieldset>
+
+<h3>Product's List</h3>
+<table width="400" border="1">
+  <thead class="headerStyle">
+    <th>Product Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Action</th>
+  </thead>
+  <tr [class.even]="even" [class.odd]="odd"
+    *ngFor="let product of products; let i=index; let odd=odd; let even=even">
+    <td>{{product.pid}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td><button (click)="DeleteProduct(i)">Delete</button></td>
+  </tr>
+</table>

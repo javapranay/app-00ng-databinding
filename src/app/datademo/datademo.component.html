@@ -1,0 +1,16 @@
+<h2>Data Binding</h2>
+<h3>{{ title }}</h3>
+<dl>
+  <dt>Name:</dt>
+  <dd>{{product.name}}</dd>
+  <dt>Price:</dt>
+  <dd>{{product.price}}</dd>
+  <dt>Quantity:</dt>
+  <dd>{{product.qty}}</dd>
+  <dt>Manufactured Date:</dt>
+  <dd>{{product.mfd.toLocaleDateString()}}</dd>
+  <dt>Preview:</dt>
+  <dd><img src="{{product.preview}}" width="150" height="100"></dd>
+  <dt>Total Amount:</dt>
+  <dd>{{ getTotal() }}</dd>
+</dl>
